@@ -6,13 +6,14 @@ import {selectAllPosts} from '../Redux/feature/postSlice';
 // create a componen
 const PostList = () => {
   const state = useSelector(selectAllPosts);
+  // console.log(state)
   return (
     <View style={styles.container}>
       <FlatList
         data={state}
         renderItem={({item}) => (
           <View style={styles.postStyle}>
-            <Text style={{color: 'black', fontSize: 15}}>{item.id}</Text>
+            {/* <Text style={{color: 'black', fontSize: 15}}>{item.id}</Text> */}
             <Text style={{color: 'black', fontSize: 15}}>{item.content}</Text>
             <Text style={{color: 'black', fontSize: 15}}>{item.title}</Text>
           </View>
